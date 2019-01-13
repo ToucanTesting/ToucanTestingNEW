@@ -1,0 +1,22 @@
+<!--The content below is only a placeholder and can be replaced.-->
+  <div class="wrapper">
+    <div class="navbar-minimize-fixed">
+      <button class="minimize-sidebar btn btn-link btn-just-icon">
+        <i class="tim-icons icon-align-center visible-on-sidebar-regular text-muted"></i>
+        <i class="tim-icons icon-bullet-list-67 visible-on-sidebar-mini text-muted"></i>
+      </button>
+    </div>
+    <div class="sidebar" data="blue">
+      <!--
+          Tip 1: You can change the color of the sidebar using: data-color="blue | green | orange | red"
+      -->
+      <layout-sidenav></layout-sidenav>
+    </div>
+    <div class="main-panel" data="blue">
+      <layout-topnav></layout-topnav>
+      <div class="content">
+          <router-outlet></router-outlet>  
+      </div>
+      <layout-footer></layout-footer>
+    </div>
+  </div>

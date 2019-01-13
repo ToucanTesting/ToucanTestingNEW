@@ -1,9 +1,0 @@
-C:\Users\daniel\Development\DapperDanDev\ToucanTesting\ToucanTesting.Data\bin\Debug\netstandard2.0\ToucanTesting.Data.deps.json
-C:\Users\daniel\Development\DapperDanDev\ToucanTesting\ToucanTesting.Data\bin\Debug\netstandard2.0\ToucanTesting.Data.dll
-C:\Users\daniel\Development\DapperDanDev\ToucanTesting\ToucanTesting.Data\obj\Debug\netstandard2.0\ToucanTesting.Data.csprojAssemblyReference.cache
-C:\Users\daniel\Development\DapperDanDev\ToucanTesting\ToucanTesting.Data\obj\Debug\netstandard2.0\ToucanTesting.Data.csproj.CoreCompileInputs.cache
-C:\Users\daniel\Development\DapperDanDev\ToucanTesting\ToucanTesting.Data\obj\Debug\netstandard2.0\ToucanTesting.Data.AssemblyInfoInputs.cache
-C:\Users\daniel\Development\DapperDanDev\ToucanTesting\ToucanTesting.Data\obj\Debug\netstandard2.0\ToucanTesting.Data.AssemblyInfo.cs
-C:\Users\daniel\Development\DapperDanDev\ToucanTesting\ToucanTesting.Data\bin\Debug\netstandard2.0\ToucanTesting.Data.pdb
-C:\Users\daniel\Development\DapperDanDev\ToucanTesting\ToucanTesting.Data\obj\Debug\netstandard2.0\ToucanTesting.Data.dll
-C:\Users\daniel\Development\DapperDanDev\ToucanTesting\ToucanTesting.Data\obj\Debug\netstandard2.0\ToucanTesting.Data.pdb

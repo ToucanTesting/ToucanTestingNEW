@@ -1,0 +1,565 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">14.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+    <Name>ToucanTesting.Client</Name>
+    <RootNamespace>ToucanTesting.Client</RootNamespace>
+    <LastActiveSolutionConfig>Debug|Any CPU</LastActiveSolutionConfig>
+  </PropertyGroup>
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>bb6d71ee-be5b-493e-90cd-d926a7a46bc8</ProjectGuid>
+    <ProjectHome>.</ProjectHome>
+    <StartupFile>node_modules\@vue\cli-service\bin\vue-cli-service.js</StartupFile>
+    <SearchPath>
+    </SearchPath>
+    <WorkingDirectory>.</WorkingDirectory>
+    <OutputPath>.</OutputPath>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <ProjectTypeGuids>{3AF33F2E-1136-4D97-BBB7-1795711AC8B8};{349c5851-65df-11da-9384-00065b846f21};{9092AA53-FB77-4645-B42D-1CCCA6BD08BD}</ProjectTypeGuids>
+    <NodejsPort>1337</NodejsPort>
+    <TypeScriptSourceMap>true</TypeScriptSourceMap>
+    <TypeScriptModuleKind>CommonJS</TypeScriptModuleKind>
+    <TypeScriptToolsVersion>3.1</TypeScriptToolsVersion>
+    <EnableTypeScript>true</EnableTypeScript>
+    <StartWebBrowser>true</StartWebBrowser>
+    <ScriptArguments>serve</ScriptArguments>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
+    <DebugSymbols>true</DebugSymbols>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
+    <DebugSymbols>true</DebugSymbols>
+  </PropertyGroup>
+  <!-- Do not delete the following Import Project.  While this appears to do nothing it is a marker for setting TypeScript properties before our import that depends on them. -->
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\TypeScript\Microsoft.TypeScript.targets" Condition="False" />
+  <PropertyGroup>
+    <PostBuildEvent>
+      npm run build
+    </PostBuildEvent>
+  </PropertyGroup>
+  <ItemGroup>
+    <Folder Include="e2e\" />
+    <Folder Include="e2e\src\" />
+    <Folder Include="src\" />
+    <Folder Include="src\app\" />
+    <Folder Include="src\assets\" />
+    <Folder Include="src\assets\theme\" />
+    <Folder Include="src\assets\theme\black-dashboard\" />
+    <Folder Include="src\assets\theme\black-dashboard\bootstrap\" />
+    <Folder Include="src\assets\theme\black-dashboard\bootstrap\mixins\" />
+    <Folder Include="src\assets\theme\black-dashboard\bootstrap\utilities\" />
+    <Folder Include="src\assets\theme\black-dashboard\custom\" />
+    <Folder Include="src\assets\theme\black-dashboard\custom\cards\" />
+    <Folder Include="src\assets\theme\black-dashboard\custom\mixins\" />
+    <Folder Include="src\assets\theme\black-dashboard\custom\utilities\" />
+    <Folder Include="src\assets\theme\black-dashboard\custom\vendor\" />
+    <Folder Include="src\assets\theme\fonts\" />
+    <Folder Include="src\assets\theme\img\" />
+    <Folder Include="src\assets\theme\js\" />
+    <Folder Include="src\assets\theme\js\core\" />
+    <Folder Include="src\assets\theme\js\plugins\" />
+    <Folder Include="src\assets\theme\scss\" />
+    <Folder Include="src\assets\theme\scss\black-dashboard\" />
+    <Folder Include="src\assets\theme\scss\black-dashboard\bootstrap\" />
+    <Folder Include="src\assets\theme\scss\black-dashboard\bootstrap\mixins\" />
+    <Folder Include="src\assets\theme\scss\black-dashboard\bootstrap\utilities\" />
+    <Folder Include="src\assets\theme\scss\black-dashboard\custom\" />
+    <Folder Include="src\assets\theme\scss\black-dashboard\custom\cards\" />
+    <Folder Include="src\assets\theme\scss\black-dashboard\custom\mixins\" />
+    <Folder Include="src\assets\theme\scss\black-dashboard\custom\utilities\" />
+    <Folder Include="src\assets\theme\scss\black-dashboard\custom\vendor\" />
+    <Folder Include="src\environments\" />
+  </ItemGroup>
+  <ItemGroup>
+    <TypeScriptCompile Include="e2e\src\app.e2e-spec.ts" />
+    <TypeScriptCompile Include="e2e\src\app.po.ts" />
+    <TypeScriptCompile Include="src\app\app-routing.module.ts" />
+    <TypeScriptCompile Include="src\app\app.component.spec.ts" />
+    <TypeScriptCompile Include="src\app\app.component.ts" />
+    <TypeScriptCompile Include="src\app\app.module.ts" />
+    <TypeScriptCompile Include="src\environments\environment.prod.ts" />
+    <TypeScriptCompile Include="src\environments\environment.ts" />
+    <TypeScriptCompile Include="src\main.ts" />
+    <TypeScriptCompile Include="src\polyfills.ts" />
+    <TypeScriptCompile Include="src\test.ts" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="e2e\protractor.conf.js" />
+    <Compile Include="src\assets\theme\js\black-dashboard.js" />
+    <Compile Include="src\assets\theme\js\black-dashboard.min.js" />
+    <Compile Include="src\assets\theme\js\core\bootstrap.min.js" />
+    <Compile Include="src\assets\theme\js\core\jquery.min.js" />
+    <Compile Include="src\assets\theme\js\core\popper.min.js" />
+    <Compile Include="src\assets\theme\js\plugins\bootstrap-datetimepicker.js" />
+    <Compile Include="src\assets\theme\js\plugins\bootstrap-notify.js" />
+    <Compile Include="src\assets\theme\js\plugins\bootstrap-selectpicker.js" />
+    <Compile Include="src\assets\theme\js\plugins\bootstrap-switch.js" />
+    <Compile Include="src\assets\theme\js\plugins\bootstrap-tagsinput.js" />
+    <Compile Include="src\assets\theme\js\plugins\chartjs.min.js" />
+    <Compile Include="src\assets\theme\js\plugins\fullcalendar.min.js" />
+    <Compile Include="src\assets\theme\js\plugins\jasny-bootstrap.min.js" />
+    <Compile Include="src\assets\theme\js\plugins\jquery-jvectormap.js" />
+    <Compile Include="src\assets\theme\js\plugins\jquery.bootstrap-wizard.js" />
+    <Compile Include="src\assets\theme\js\plugins\jquery.dataTables.min.js" />
+    <Compile Include="src\assets\theme\js\plugins\jquery.tablesorter.js" />
+    <Compile Include="src\assets\theme\js\plugins\jquery.validate.min.js" />
+    <Compile Include="src\assets\theme\js\plugins\moment.min.js" />
+    <Compile Include="src\assets\theme\js\plugins\nouislider.min.js" />
+    <Compile Include="src\assets\theme\js\plugins\perfect-scrollbar.jquery.min.js" />
+    <Compile Include="src\assets\theme\js\plugins\sweetalert2.min.js" />
+    <Compile Include="src\karma.conf.js" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include=".editorconfig" />
+    <Content Include=".gitignore" />
+    <Content Include="angular.json" />
+    <Content Include="e2e\tsconfig.e2e.json" />
+    <Content Include="package-lock.json" />
+    <Content Include="package.json" />
+    <Content Include="README.md" />
+    <Content Include="src\app\app.component.html" />
+    <Content Include="src\app\app.component.scss" />
+    <Content Include="src\assets\.gitkeep" />
+    <Content Include="src\assets\theme\black-dashboard\bootstrap\mixins\_alert.scss" />
+    <Content Include="src\assets\theme\black-dashboard\bootstrap\mixins\_background-variant.scss" />
+    <Content Include="src\assets\theme\black-dashboard\bootstrap\mixins\_badge.scss" />
+    <Content Include="src\assets\theme\black-dashboard\bootstrap\mixins\_border-radius.scss" />
+    <Content Include="src\assets\theme\black-dashboard\bootstrap\mixins\_box-shadow.scss" />
+    <Content Include="src\assets\theme\black-dashboard\bootstrap\mixins\_breakpoints.scss" />
+    <Content Include="src\assets\theme\black-dashboard\bootstrap\mixins\_buttons.scss" />
+    <Content Include="src\assets\theme\black-dashboard\bootstrap\mixins\_caret.scss" />
+    <Content Include="src\assets\theme\black-dashboard\bootstrap\mixins\_clearfix.scss" />
+    <Content Include="src\assets\theme\black-dashboard\bootstrap\mixins\_float.scss" />
+    <Content Include="src\assets\theme\black-dashboard\bootstrap\mixins\_forms.scss" />
+    <Content Include="src\assets\theme\black-dashboard\bootstrap\mixins\_gradients.scss" />
+    <Content Include="src\assets\theme\black-dashboard\bootstrap\mixins\_grid-framework.scss" />
+    <Content Include="src\assets\theme\black-dashboard\bootstrap\mixins\_grid.scss" />
+    <Content Include="src\assets\theme\black-dashboard\bootstrap\mixins\_hover.scss" />
+    <Content Include="src\assets\theme\black-dashboard\bootstrap\mixins\_image.scss" />
+    <Content Include="src\assets\theme\black-dashboard\bootstrap\mixins\_list-group.scss" />
+    <Content Include="src\assets\theme\black-dashboard\bootstrap\mixins\_lists.scss" />
+    <Content Include="src\assets\theme\black-dashboard\bootstrap\mixins\_nav-divider.scss" />
+    <Content Include="src\assets\theme\black-dashboard\bootstrap\mixins\_pagination.scss" />
+    <Content Include="src\assets\theme\black-dashboard\bootstrap\mixins\_reset-text.scss" />
+    <Content Include="src\assets\theme\black-dashboard\bootstrap\mixins\_resize.scss" />
+    <Content Include="src\assets\theme\black-dashboard\bootstrap\mixins\_screen-reader.scss" />
+    <Content Include="src\assets\theme\black-dashboard\bootstrap\mixins\_size.scss" />
+    <Content Include="src\assets\theme\black-dashboard\bootstrap\mixins\_table-row.scss" />
+    <Content Include="src\assets\theme\black-dashboard\bootstrap\mixins\_text-emphasis.scss" />
+    <Content Include="src\assets\theme\black-dashboard\bootstrap\mixins\_text-hide.scss" />
+    <Content Include="src\assets\theme\black-dashboard\bootstrap\mixins\_text-truncate.scss" />
+    <Content Include="src\assets\theme\black-dashboard\bootstrap\mixins\_transition.scss" />
+    <Content Include="src\assets\theme\black-dashboard\bootstrap\mixins\_visibility.scss" />
+    <Content Include="src\assets\theme\black-dashboard\bootstrap\utilities\_align.scss" />
+    <Content Include="src\assets\theme\black-dashboard\bootstrap\utilities\_background.scss" />
+    <Content Include="src\assets\theme\black-dashboard\bootstrap\utilities\_borders.scss" />
+    <Content Include="src\assets\theme\black-dashboard\bootstrap\utilities\_clearfix.scss" />
+    <Content Include="src\assets\theme\black-dashboard\bootstrap\utilities\_display.scss" />
+    <Content Include="src\assets\theme\black-dashboard\bootstrap\utilities\_embed.scss" />
+    <Content Include="src\assets\theme\black-dashboard\bootstrap\utilities\_flex.scss" />
+    <Content Include="src\assets\theme\black-dashboard\bootstrap\utilities\_float.scss" />
+    <Content Include="src\assets\theme\black-dashboard\bootstrap\utilities\_position.scss" />
+    <Content Include="src\assets\theme\black-dashboard\bootstrap\utilities\_screenreaders.scss" />
+    <Content Include="src\assets\theme\black-dashboard\bootstrap\utilities\_shadows.scss" />
+    <Content Include="src\assets\theme\black-dashboard\bootstrap\utilities\_sizing.scss" />
+    <Content Include="src\assets\theme\black-dashboard\bootstrap\utilities\_spacing.scss" />
+    <Content Include="src\assets\theme\black-dashboard\bootstrap\utilities\_text.scss" />
+    <Content Include="src\assets\theme\black-dashboard\bootstrap\utilities\_visibility.scss" />
+    <Content Include="src\assets\theme\black-dashboard\bootstrap\_alert.scss" />
+    <Content Include="src\assets\theme\black-dashboard\bootstrap\_badge.scss" />
+    <Content Include="src\assets\theme\black-dashboard\bootstrap\_breadcrumb.scss" />
+    <Content Include="src\assets\theme\black-dashboard\bootstrap\_button-group.scss" />
+    <Content Include="src\assets\theme\black-dashboard\bootstrap\_buttons.scss" />
+    <Content Include="src\assets\theme\black-dashboard\bootstrap\_card.scss" />
+    <Content Include="src\assets\theme\black-dashboard\bootstrap\_carousel.scss" />
+    <Content Include="src\assets\theme\black-dashboard\bootstrap\_close.scss" />
+    <Content Include="src\assets\theme\black-dashboard\bootstrap\_code.scss" />
+    <Content Include="src\assets\theme\black-dashboard\bootstrap\_custom-forms.scss" />
+    <Content Include="src\assets\theme\black-dashboard\bootstrap\_dropdown.scss" />
+    <Content Include="src\assets\theme\black-dashboard\bootstrap\_forms.scss" />
+    <Content Include="src\assets\theme\black-dashboard\bootstrap\_functions.scss" />
+    <Content Include="src\assets\theme\black-dashboard\bootstrap\_grid.scss" />
+    <Content Include="src\assets\theme\black-dashboard\bootstrap\_images.scss" />
+    <Content Include="src\assets\theme\black-dashboard\bootstrap\_input-group.scss" />
+    <Content Include="src\assets\theme\black-dashboard\bootstrap\_jumbotron.scss" />
+    <Content Include="src\assets\theme\black-dashboard\bootstrap\_list-group.scss" />
+    <Content Include="src\assets\theme\black-dashboard\bootstrap\_media.scss" />
+    <Content Include="src\assets\theme\black-dashboard\bootstrap\_mixins.scss" />
+    <Content Include="src\assets\theme\black-dashboard\bootstrap\_modal.scss" />
+    <Content Include="src\assets\theme\black-dashboard\bootstrap\_nav.scss" />
+    <Content Include="src\assets\theme\black-dashboard\bootstrap\_navbar.scss" />
+    <Content Include="src\assets\theme\black-dashboard\bootstrap\_pagination.scss" />
+    <Content Include="src\assets\theme\black-dashboard\bootstrap\_popover.scss" />
+    <Content Include="src\assets\theme\black-dashboard\bootstrap\_print.scss" />
+    <Content Include="src\assets\theme\black-dashboard\bootstrap\_progress.scss" />
+    <Content Include="src\assets\theme\black-dashboard\bootstrap\_reboot.scss" />
+    <Content Include="src\assets\theme\black-dashboard\bootstrap\_root.scss" />
+    <Content Include="src\assets\theme\black-dashboard\bootstrap\_tables.scss" />
+    <Content Include="src\assets\theme\black-dashboard\bootstrap\_tooltip.scss" />
+    <Content Include="src\assets\theme\black-dashboard\bootstrap\_transitions.scss" />
+    <Content Include="src\assets\theme\black-dashboard\bootstrap\_type.scss" />
+    <Content Include="src\assets\theme\black-dashboard\bootstrap\_utilities.scss" />
+    <Content Include="src\assets\theme\black-dashboard\bootstrap\_variables.scss" />
+    <Content Include="src\assets\theme\black-dashboard\custom\cards\_card-animation-on-hover.scss" />
+    <Content Include="src\assets\theme\black-dashboard\custom\cards\_card-chart.scss" />
+    <Content Include="src\assets\theme\black-dashboard\custom\cards\_card-collapse.scss" />
+    <Content Include="src\assets\theme\black-dashboard\custom\cards\_card-contributions.scss" />
+    <Content Include="src\assets\theme\black-dashboard\custom\cards\_card-lock.scss" />
+    <Content Include="src\assets\theme\black-dashboard\custom\cards\_card-map.scss" />
+    <Content Include="src\assets\theme\black-dashboard\custom\cards\_card-plain.scss" />
+    <Content Include="src\assets\theme\black-dashboard\custom\cards\_card-pricing.scss" />
+    <Content Include="src\assets\theme\black-dashboard\custom\cards\_card-profile.scss" />
+    <Content Include="src\assets\theme\black-dashboard\custom\cards\_card-register.scss" />
+    <Content Include="src\assets\theme\black-dashboard\custom\cards\_card-stats-mini.scss" />
+    <Content Include="src\assets\theme\black-dashboard\custom\cards\_card-stats.scss" />
+    <Content Include="src\assets\theme\black-dashboard\custom\cards\_card-subcategories.scss" />
+    <Content Include="src\assets\theme\black-dashboard\custom\cards\_card-task.scss" />
+    <Content Include="src\assets\theme\black-dashboard\custom\cards\_card-testimonials.scss" />
+    <Content Include="src\assets\theme\black-dashboard\custom\cards\_card-user.scss" />
+    <Content Include="src\assets\theme\black-dashboard\custom\cards\_card-wizard.scss" />
+    <Content Include="src\assets\theme\black-dashboard\custom\mixins\opacity.scss" />
+    <Content Include="src\assets\theme\black-dashboard\custom\mixins\_alert.scss" />
+    <Content Include="src\assets\theme\black-dashboard\custom\mixins\_background-variant.scss" />
+    <Content Include="src\assets\theme\black-dashboard\custom\mixins\_badges.scss" />
+    <Content Include="src\assets\theme\black-dashboard\custom\mixins\_buttons.scss" />
+    <Content Include="src\assets\theme\black-dashboard\custom\mixins\_dropdown.scss" />
+    <Content Include="src\assets\theme\black-dashboard\custom\mixins\_forms.scss" />
+    <Content Include="src\assets\theme\black-dashboard\custom\mixins\_icon.scss" />
+    <Content Include="src\assets\theme\black-dashboard\custom\mixins\_inputs.scss" />
+    <Content Include="src\assets\theme\black-dashboard\custom\mixins\_modals.scss" />
+    <Content Include="src\assets\theme\black-dashboard\custom\mixins\_page-header.scss" />
+    <Content Include="src\assets\theme\black-dashboard\custom\mixins\_popovers.scss" />
+    <Content Include="src\assets\theme\black-dashboard\custom\mixins\_vendor-prefixes.scss" />
+    <Content Include="src\assets\theme\black-dashboard\custom\mixins\_wizard.scss" />
+    <Content Include="src\assets\theme\black-dashboard\custom\utilities\_backgrounds.scss" />
+    <Content Include="src\assets\theme\black-dashboard\custom\utilities\_floating.scss" />
+    <Content Include="src\assets\theme\black-dashboard\custom\utilities\_helper.scss" />
+    <Content Include="src\assets\theme\black-dashboard\custom\utilities\_position.scss" />
+    <Content Include="src\assets\theme\black-dashboard\custom\utilities\_shadows.scss" />
+    <Content Include="src\assets\theme\black-dashboard\custom\utilities\_sizing.scss" />
+    <Content Include="src\assets\theme\black-dashboard\custom\utilities\_spacing.scss" />
+    <Content Include="src\assets\theme\black-dashboard\custom\utilities\_text.scss" />
+    <Content Include="src\assets\theme\black-dashboard\custom\utilities\_transform.scss" />
+    <Content Include="src\assets\theme\black-dashboard\custom\vendor\_plugin-animate-bootstrap-notify.scss" />
+    <Content Include="src\assets\theme\black-dashboard\custom\vendor\_plugin-bootstrap-select.scss" />
+    <Content Include="src\assets\theme\black-dashboard\custom\vendor\_plugin-bootstrap-switch.scss" />
+    <Content Include="src\assets\theme\black-dashboard\custom\vendor\_plugin-card-wizard.scss" />
+    <Content Include="src\assets\theme\black-dashboard\custom\vendor\_plugin-datatables.net.scss" />
+    <Content Include="src\assets\theme\black-dashboard\custom\vendor\_plugin-datetimepicker.scss" />
+    <Content Include="src\assets\theme\black-dashboard\custom\vendor\_plugin-fullcalendar.scss" />
+    <Content Include="src\assets\theme\black-dashboard\custom\vendor\_plugin-jasny-fileupload.scss" />
+    <Content Include="src\assets\theme\black-dashboard\custom\vendor\_plugin-jquery.jvectormap.scss" />
+    <Content Include="src\assets\theme\black-dashboard\custom\vendor\_plugin-nouislider.scss" />
+    <Content Include="src\assets\theme\black-dashboard\custom\vendor\_plugin-perfect-scrollbar.scss" />
+    <Content Include="src\assets\theme\black-dashboard\custom\vendor\_plugin-sweetalert2.scss" />
+    <Content Include="src\assets\theme\black-dashboard\custom\vendor\_plugin-tagsinput.scss" />
+    <Content Include="src\assets\theme\black-dashboard\custom\_alerts.scss" />
+    <Content Include="src\assets\theme\black-dashboard\custom\_avatars.scss" />
+    <Content Include="src\assets\theme\black-dashboard\custom\_badge.scss" />
+    <Content Include="src\assets\theme\black-dashboard\custom\_buttons.scss" />
+    <Content Include="src\assets\theme\black-dashboard\custom\_card.scss" />
+    <Content Include="src\assets\theme\black-dashboard\custom\_checkboxes-radio.scss" />
+    <Content Include="src\assets\theme\black-dashboard\custom\_close.scss" />
+    <Content Include="src\assets\theme\black-dashboard\custom\_custom-forms.scss" />
+    <Content Include="src\assets\theme\black-dashboard\custom\_dropdown.scss" />
+    <Content Include="src\assets\theme\black-dashboard\custom\_example-pages.scss" />
+    <Content Include="src\assets\theme\black-dashboard\custom\_fixed-plugin.scss" />
+    <Content Include="src\assets\theme\black-dashboard\custom\_footer.scss" />
+    <Content Include="src\assets\theme\black-dashboard\custom\_forms.scss" />
+    <Content Include="src\assets\theme\black-dashboard\custom\_functions.scss" />
+    <Content Include="src\assets\theme\black-dashboard\custom\_global.scss" />
+    <Content Include="src\assets\theme\black-dashboard\custom\_grid.scss" />
+    <Content Include="src\assets\theme\black-dashboard\custom\_icons.scss" />
+    <Content Include="src\assets\theme\black-dashboard\custom\_images.scss" />
+    <Content Include="src\assets\theme\black-dashboard\custom\_info-areas.scss" />
+    <Content Include="src\assets\theme\black-dashboard\custom\_input-group.scss" />
+    <Content Include="src\assets\theme\black-dashboard\custom\_misc.scss" />
+    <Content Include="src\assets\theme\black-dashboard\custom\_mixins.scss" />
+    <Content Include="src\assets\theme\black-dashboard\custom\_modal.scss" />
+    <Content Include="src\assets\theme\black-dashboard\custom\_nav.scss" />
+    <Content Include="src\assets\theme\black-dashboard\custom\_navbar.scss" />
+    <Content Include="src\assets\theme\black-dashboard\custom\_pagination.scss" />
+    <Content Include="src\assets\theme\black-dashboard\custom\_pills.scss" />
+    <Content Include="src\assets\theme\black-dashboard\custom\_popover.scss" />
+    <Content Include="src\assets\theme\black-dashboard\custom\_progress.scss" />
+    <Content Include="src\assets\theme\black-dashboard\custom\_reboot.scss" />
+    <Content Include="src\assets\theme\black-dashboard\custom\_rtl.scss" />
+    <Content Include="src\assets\theme\black-dashboard\custom\_sidebar-and-main-panel.scss" />
+    <Content Include="src\assets\theme\black-dashboard\custom\_tables.scss" />
+    <Content Include="src\assets\theme\black-dashboard\custom\_tabs.scss" />
+    <Content Include="src\assets\theme\black-dashboard\custom\_timeline.scss" />
+    <Content Include="src\assets\theme\black-dashboard\custom\_type.scss" />
+    <Content Include="src\assets\theme\black-dashboard\custom\_utilities.scss" />
+    <Content Include="src\assets\theme\black-dashboard\custom\_variables.scss" />
+    <Content Include="src\assets\theme\black-dashboard\custom\_white-content.scss" />
+    <Content Include="src\assets\theme\fonts\nucleo.eot" />
+    <Content Include="src\assets\theme\fonts\nucleo.ttf" />
+    <Content Include="src\assets\theme\fonts\nucleo.woff" />
+    <Content Include="src\assets\theme\fonts\nucleo.woff2" />
+    <Content Include="src\assets\theme\img\apple-icon.png" />
+    <Content Include="src\assets\theme\img\asc.gif" />
+    <Content Include="src\assets\theme\img\AU.png" />
+    <Content Include="src\assets\theme\img\bg.gif" />
+    <Content Include="src\assets\theme\img\bg1.jpg" />
+    <Content Include="src\assets\theme\img\bg13.jpg" />
+    <Content Include="src\assets\theme\img\bg14.jpg" />
+    <Content Include="src\assets\theme\img\bg15.jpg" />
+    <Content Include="src\assets\theme\img\bg16.jpg" />
+    <Content Include="src\assets\theme\img\bg3.jpg" />
+    <Content Include="src\assets\theme\img\bg5.jpg" />
+    <Content Include="src\assets\theme\img\BR.png" />
+    <Content Include="src\assets\theme\img\card-danger.png" />
+    <Content Include="src\assets\theme\img\card-info.png" />
+    <Content Include="src\assets\theme\img\card-primary.png" />
+    <Content Include="src\assets\theme\img\card-success.png" />
+    <Content Include="src\assets\theme\img\card-warning.png" />
+    <Content Include="src\assets\theme\img\DE.png" />
+    <Content Include="src\assets\theme\img\default-avatar.png" />
+    <Content Include="src\assets\theme\img\desc.gif" />
+    <Content Include="src\assets\theme\img\emilyz.jpg" />
+    <Content Include="src\assets\theme\img\favicon.png" />
+    <Content Include="src\assets\theme\img\GB.png" />
+    <Content Include="src\assets\theme\img\gucci.png" />
+    <Content Include="src\assets\theme\img\header.jpg" />
+    <Content Include="src\assets\theme\img\image_placeholder.jpg" />
+    <Content Include="src\assets\theme\img\img_3115.jpg" />
+    <Content Include="src\assets\theme\img\jacket.png" />
+    <Content Include="src\assets\theme\img\james.jpg" />
+    <Content Include="src\assets\theme\img\jana.jpg" />
+    <Content Include="src\assets\theme\img\lora.jpg" />
+    <Content Include="src\assets\theme\img\mike.jpg" />
+    <Content Include="src\assets\theme\img\placeholder.jpg" />
+    <Content Include="src\assets\theme\img\RO.png" />
+    <Content Include="src\assets\theme\img\robi.jpg" />
+    <Content Include="src\assets\theme\img\saint-laurent.jpg" />
+    <Content Include="src\assets\theme\img\t-shirt.png" />
+    <Content Include="src\assets\theme\img\tania.jpg" />
+    <Content Include="src\assets\theme\img\US.png" />
+    <Content Include="src\assets\theme\js\black-dashboard.js.map" />
+    <Content Include="src\assets\theme\scss\black-dashboard.scss" />
+    <Content Include="src\assets\theme\scss\black-dashboard\bootstrap\mixins\_alert.scss" />
+    <Content Include="src\assets\theme\scss\black-dashboard\bootstrap\mixins\_background-variant.scss" />
+    <Content Include="src\assets\theme\scss\black-dashboard\bootstrap\mixins\_badge.scss" />
+    <Content Include="src\assets\theme\scss\black-dashboard\bootstrap\mixins\_border-radius.scss" />
+    <Content Include="src\assets\theme\scss\black-dashboard\bootstrap\mixins\_box-shadow.scss" />
+    <Content Include="src\assets\theme\scss\black-dashboard\bootstrap\mixins\_breakpoints.scss" />
+    <Content Include="src\assets\theme\scss\black-dashboard\bootstrap\mixins\_buttons.scss" />
+    <Content Include="src\assets\theme\scss\black-dashboard\bootstrap\mixins\_caret.scss" />
+    <Content Include="src\assets\theme\scss\black-dashboard\bootstrap\mixins\_clearfix.scss" />
+    <Content Include="src\assets\theme\scss\black-dashboard\bootstrap\mixins\_float.scss" />
+    <Content Include="src\assets\theme\scss\black-dashboard\bootstrap\mixins\_forms.scss" />
+    <Content Include="src\assets\theme\scss\black-dashboard\bootstrap\mixins\_gradients.scss" />
+    <Content Include="src\assets\theme\scss\black-dashboard\bootstrap\mixins\_grid-framework.scss" />
+    <Content Include="src\assets\theme\scss\black-dashboard\bootstrap\mixins\_grid.scss" />
+    <Content Include="src\assets\theme\scss\black-dashboard\bootstrap\mixins\_hover.scss" />
+    <Content Include="src\assets\theme\scss\black-dashboard\bootstrap\mixins\_image.scss" />
+    <Content Include="src\assets\theme\scss\black-dashboard\bootstrap\mixins\_list-group.scss" />
+    <Content Include="src\assets\theme\scss\black-dashboard\bootstrap\mixins\_lists.scss" />
+    <Content Include="src\assets\theme\scss\black-dashboard\bootstrap\mixins\_nav-divider.scss" />
+    <Content Include="src\assets\theme\scss\black-dashboard\bootstrap\mixins\_pagination.scss" />
+    <Content Include="src\assets\theme\scss\black-dashboard\bootstrap\mixins\_reset-text.scss" />
+    <Content Include="src\assets\theme\scss\black-dashboard\bootstrap\mixins\_resize.scss" />
+    <Content Include="src\assets\theme\scss\black-dashboard\bootstrap\mixins\_screen-reader.scss" />
+    <Content Include="src\assets\theme\scss\black-dashboard\bootstrap\mixins\_size.scss" />
+    <Content Include="src\assets\theme\scss\black-dashboard\bootstrap\mixins\_table-row.scss" />
+    <Content Include="src\assets\theme\scss\black-dashboard\bootstrap\mixins\_text-emphasis.scss" />
+    <Content Include="src\assets\theme\scss\black-dashboard\bootstrap\mixins\_text-hide.scss" />
+    <Content Include="src\assets\theme\scss\black-dashboard\bootstrap\mixins\_text-truncate.scss" />
+    <Content Include="src\assets\theme\scss\black-dashboard\bootstrap\mixins\_transition.scss" />
+    <Content Include="src\assets\theme\scss\black-dashboard\bootstrap\mixins\_visibility.scss" />
+    <Content Include="src\assets\theme\scss\black-dashboard\bootstrap\utilities\_align.scss" />
+    <Content Include="src\assets\theme\scss\black-dashboard\bootstrap\utilities\_background.scss" />
+    <Content Include="src\assets\theme\scss\black-dashboard\bootstrap\utilities\_borders.scss" />
+    <Content Include="src\assets\theme\scss\black-dashboard\bootstrap\utilities\_clearfix.scss" />
+    <Content Include="src\assets\theme\scss\black-dashboard\bootstrap\utilities\_display.scss" />
+    <Content Include="src\assets\theme\scss\black-dashboard\bootstrap\utilities\_embed.scss" />
+    <Content Include="src\assets\theme\scss\black-dashboard\bootstrap\utilities\_flex.scss" />
+    <Content Include="src\assets\theme\scss\black-dashboard\bootstrap\utilities\_float.scss" />
+    <Content Include="src\assets\theme\scss\black-dashboard\bootstrap\utilities\_position.scss" />
+    <Content Include="src\assets\theme\scss\black-dashboard\bootstrap\utilities\_screenreaders.scss" />
+    <Content Include="src\assets\theme\scss\black-dashboard\bootstrap\utilities\_shadows.scss" />
+    <Content Include="src\assets\theme\scss\black-dashboard\bootstrap\utilities\_sizing.scss" />
+    <Content Include="src\assets\theme\scss\black-dashboard\bootstrap\utilities\_spacing.scss" />
+    <Content Include="src\assets\theme\scss\black-dashboard\bootstrap\utilities\_text.scss" />
+    <Content Include="src\assets\theme\scss\black-dashboard\bootstrap\utilities\_visibility.scss" />
+    <Content Include="src\assets\theme\scss\black-dashboard\bootstrap\_alert.scss" />
+    <Content Include="src\assets\theme\scss\black-dashboard\bootstrap\_badge.scss" />
+    <Content Include="src\assets\theme\scss\black-dashboard\bootstrap\_breadcrumb.scss" />
+    <Content Include="src\assets\theme\scss\black-dashboard\bootstrap\_button-group.scss" />
+    <Content Include="src\assets\theme\scss\black-dashboard\bootstrap\_buttons.scss" />
+    <Content Include="src\assets\theme\scss\black-dashboard\bootstrap\_card.scss" />
+    <Content Include="src\assets\theme\scss\black-dashboard\bootstrap\_carousel.scss" />
+    <Content Include="src\assets\theme\scss\black-dashboard\bootstrap\_close.scss" />
+    <Content Include="src\assets\theme\scss\black-dashboard\bootstrap\_code.scss" />
+    <Content Include="src\assets\theme\scss\black-dashboard\bootstrap\_custom-forms.scss" />
+    <Content Include="src\assets\theme\scss\black-dashboard\bootstrap\_dropdown.scss" />
+    <Content Include="src\assets\theme\scss\black-dashboard\bootstrap\_forms.scss" />
+    <Content Include="src\assets\theme\scss\black-dashboard\bootstrap\_functions.scss" />
+    <Content Include="src\assets\theme\scss\black-dashboard\bootstrap\_grid.scss" />
+    <Content Include="src\assets\theme\scss\black-dashboard\bootstrap\_images.scss" />
+    <Content Include="src\assets\theme\scss\black-dashboard\bootstrap\_input-group.scss" />
+    <Content Include="src\assets\theme\scss\black-dashboard\bootstrap\_jumbotron.scss" />
+    <Content Include="src\assets\theme\scss\black-dashboard\bootstrap\_list-group.scss" />
+    <Content Include="src\assets\theme\scss\black-dashboard\bootstrap\_media.scss" />
+    <Content Include="src\assets\theme\scss\black-dashboard\bootstrap\_mixins.scss" />
+    <Content Include="src\assets\theme\scss\black-dashboard\bootstrap\_modal.scss" />
+    <Content Include="src\assets\theme\scss\black-dashboard\bootstrap\_nav.scss" />
+    <Content Include="src\assets\theme\scss\black-dashboard\bootstrap\_navbar.scss" />
+    <Content Include="src\assets\theme\scss\black-dashboard\bootstrap\_pagination.scss" />
+    <Content Include="src\assets\theme\scss\black-dashboard\bootstrap\_popover.scss" />
+    <Content Include="src\assets\theme\scss\black-dashboard\bootstrap\_print.scss" />
+    <Content Include="src\assets\theme\scss\black-dashboard\bootstrap\_progress.scss" />
+    <Content Include="src\assets\theme\scss\black-dashboard\bootstrap\_reboot.scss" />
+    <Content Include="src\assets\theme\scss\black-dashboard\bootstrap\_root.scss" />
+    <Content Include="src\assets\theme\scss\black-dashboard\bootstrap\_tables.scss" />
+    <Content Include="src\assets\theme\scss\black-dashboard\bootstrap\_tooltip.scss" />
+    <Content Include="src\assets\theme\scss\black-dashboard\bootstrap\_transitions.scss" />
+    <Content Include="src\assets\theme\scss\black-dashboard\bootstrap\_type.scss" />
+    <Content Include="src\assets\theme\scss\black-dashboard\bootstrap\_utilities.scss" />
+    <Content Include="src\assets\theme\scss\black-dashboard\bootstrap\_variables.scss" />
+    <Content Include="src\assets\theme\scss\black-dashboard\custom\cards\_card-animation-on-hover.scss" />
+    <Content Include="src\assets\theme\scss\black-dashboard\custom\cards\_card-chart.scss" />
+    <Content Include="src\assets\theme\scss\black-dashboard\custom\cards\_card-collapse.scss" />
+    <Content Include="src\assets\theme\scss\black-dashboard\custom\cards\_card-contributions.scss" />
+    <Content Include="src\assets\theme\scss\black-dashboard\custom\cards\_card-lock.scss" />
+    <Content Include="src\assets\theme\scss\black-dashboard\custom\cards\_card-map.scss" />
+    <Content Include="src\assets\theme\scss\black-dashboard\custom\cards\_card-plain.scss" />
+    <Content Include="src\assets\theme\scss\black-dashboard\custom\cards\_card-pricing.scss" />
+    <Content Include="src\assets\theme\scss\black-dashboard\custom\cards\_card-profile.scss" />
+    <Content Include="src\assets\theme\scss\black-dashboard\custom\cards\_card-register.scss" />
+    <Content Include="src\assets\theme\scss\black-dashboard\custom\cards\_card-stats-mini.scss" />
+    <Content Include="src\assets\theme\scss\black-dashboard\custom\cards\_card-stats.scss" />
+    <Content Include="src\assets\theme\scss\black-dashboard\custom\cards\_card-subcategories.scss" />
+    <Content Include="src\assets\theme\scss\black-dashboard\custom\cards\_card-task.scss" />
+    <Content Include="src\assets\theme\scss\black-dashboard\custom\cards\_card-testimonials.scss" />
+    <Content Include="src\assets\theme\scss\black-dashboard\custom\cards\_card-user.scss" />
+    <Content Include="src\assets\theme\scss\black-dashboard\custom\cards\_card-wizard.scss" />
+    <Content Include="src\assets\theme\scss\black-dashboard\custom\mixins\opacity.scss" />
+    <Content Include="src\assets\theme\scss\black-dashboard\custom\mixins\_alert.scss" />
+    <Content Include="src\assets\theme\scss\black-dashboard\custom\mixins\_background-variant.scss" />
+    <Content Include="src\assets\theme\scss\black-dashboard\custom\mixins\_badges.scss" />
+    <Content Include="src\assets\theme\scss\black-dashboard\custom\mixins\_buttons.scss" />
+    <Content Include="src\assets\theme\scss\black-dashboard\custom\mixins\_dropdown.scss" />
+    <Content Include="src\assets\theme\scss\black-dashboard\custom\mixins\_forms.scss" />
+    <Content Include="src\assets\theme\scss\black-dashboard\custom\mixins\_icon.scss" />
+    <Content Include="src\assets\theme\scss\black-dashboard\custom\mixins\_inputs.scss" />
+    <Content Include="src\assets\theme\scss\black-dashboard\custom\mixins\_modals.scss" />
+    <Content Include="src\assets\theme\scss\black-dashboard\custom\mixins\_page-header.scss" />
+    <Content Include="src\assets\theme\scss\black-dashboard\custom\mixins\_popovers.scss" />
+    <Content Include="src\assets\theme\scss\black-dashboard\custom\mixins\_vendor-prefixes.scss" />
+    <Content Include="src\assets\theme\scss\black-dashboard\custom\mixins\_wizard.scss" />
+    <Content Include="src\assets\theme\scss\black-dashboard\custom\utilities\_backgrounds.scss" />
+    <Content Include="src\assets\theme\scss\black-dashboard\custom\utilities\_floating.scss" />
+    <Content Include="src\assets\theme\scss\black-dashboard\custom\utilities\_helper.scss" />
+    <Content Include="src\assets\theme\scss\black-dashboard\custom\utilities\_position.scss" />
+    <Content Include="src\assets\theme\scss\black-dashboard\custom\utilities\_shadows.scss" />
+    <Content Include="src\assets\theme\scss\black-dashboard\custom\utilities\_sizing.scss" />
+    <Content Include="src\assets\theme\scss\black-dashboard\custom\utilities\_spacing.scss" />
+    <Content Include="src\assets\theme\scss\black-dashboard\custom\utilities\_text.scss" />
+    <Content Include="src\assets\theme\scss\black-dashboard\custom\utilities\_transform.scss" />
+    <Content Include="src\assets\theme\scss\black-dashboard\custom\vendor\_plugin-animate-bootstrap-notify.scss" />
+    <Content Include="src\assets\theme\scss\black-dashboard\custom\vendor\_plugin-bootstrap-select.scss" />
+    <Content Include="src\assets\theme\scss\black-dashboard\custom\vendor\_plugin-bootstrap-switch.scss" />
+    <Content Include="src\assets\theme\scss\black-dashboard\custom\vendor\_plugin-card-wizard.scss" />
+    <Content Include="src\assets\theme\scss\black-dashboard\custom\vendor\_plugin-datatables.net.scss" />
+    <Content Include="src\assets\theme\scss\black-dashboard\custom\vendor\_plugin-datetimepicker.scss" />
+    <Content Include="src\assets\theme\scss\black-dashboard\custom\vendor\_plugin-fullcalendar.scss" />
+    <Content Include="src\assets\theme\scss\black-dashboard\custom\vendor\_plugin-jasny-fileupload.scss" />
+    <Content Include="src\assets\theme\scss\black-dashboard\custom\vendor\_plugin-jquery.jvectormap.scss" />
+    <Content Include="src\assets\theme\scss\black-dashboard\custom\vendor\_plugin-nouislider.scss" />
+    <Content Include="src\assets\theme\scss\black-dashboard\custom\vendor\_plugin-perfect-scrollbar.scss" />
+    <Content Include="src\assets\theme\scss\black-dashboard\custom\vendor\_plugin-sweetalert2.scss" />
+    <Content Include="src\assets\theme\scss\black-dashboard\custom\vendor\_plugin-tagsinput.scss" />
+    <Content Include="src\assets\theme\scss\black-dashboard\custom\_alerts.scss" />
+    <Content Include="src\assets\theme\scss\black-dashboard\custom\_avatars.scss" />
+    <Content Include="src\assets\theme\scss\black-dashboard\custom\_badge.scss" />
+    <Content Include="src\assets\theme\scss\black-dashboard\custom\_buttons.scss" />
+    <Content Include="src\assets\theme\scss\black-dashboard\custom\_card.scss" />
+    <Content Include="src\assets\theme\scss\black-dashboard\custom\_checkboxes-radio.scss" />
+    <Content Include="src\assets\theme\scss\black-dashboard\custom\_close.scss" />
+    <Content Include="src\assets\theme\scss\black-dashboard\custom\_custom-forms.scss" />
+    <Content Include="src\assets\theme\scss\black-dashboard\custom\_dropdown.scss" />
+    <Content Include="src\assets\theme\scss\black-dashboard\custom\_example-pages.scss" />
+    <Content Include="src\assets\theme\scss\black-dashboard\custom\_fixed-plugin.scss" />
+    <Content Include="src\assets\theme\scss\black-dashboard\custom\_footer.scss" />
+    <Content Include="src\assets\theme\scss\black-dashboard\custom\_forms.scss" />
+    <Content Include="src\assets\theme\scss\black-dashboard\custom\_functions.scss" />
+    <Content Include="src\assets\theme\scss\black-dashboard\custom\_global.scss" />
+    <Content Include="src\assets\theme\scss\black-dashboard\custom\_grid.scss" />
+    <Content Include="src\assets\theme\scss\black-dashboard\custom\_icons.scss" />
+    <Content Include="src\assets\theme\scss\black-dashboard\custom\_images.scss" />
+    <Content Include="src\assets\theme\scss\black-dashboard\custom\_info-areas.scss" />
+    <Content Include="src\assets\theme\scss\black-dashboard\custom\_input-group.scss" />
+    <Content Include="src\assets\theme\scss\black-dashboard\custom\_misc.scss" />
+    <Content Include="src\assets\theme\scss\black-dashboard\custom\_mixins.scss" />
+    <Content Include="src\assets\theme\scss\black-dashboard\custom\_modal.scss" />
+    <Content Include="src\assets\theme\scss\black-dashboard\custom\_nav.scss" />
+    <Content Include="src\assets\theme\scss\black-dashboard\custom\_navbar.scss" />
+    <Content Include="src\assets\theme\scss\black-dashboard\custom\_pagination.scss" />
+    <Content Include="src\assets\theme\scss\black-dashboard\custom\_pills.scss" />
+    <Content Include="src\assets\theme\scss\black-dashboard\custom\_popover.scss" />
+    <Content Include="src\assets\theme\scss\black-dashboard\custom\_progress.scss" />
+    <Content Include="src\assets\theme\scss\black-dashboard\custom\_reboot.scss" />
+    <Content Include="src\assets\theme\scss\black-dashboard\custom\_rtl.scss" />
+    <Content Include="src\assets\theme\scss\black-dashboard\custom\_sidebar-and-main-panel.scss" />
+    <Content Include="src\assets\theme\scss\black-dashboard\custom\_tables.scss" />
+    <Content Include="src\assets\theme\scss\black-dashboard\custom\_tabs.scss" />
+    <Content Include="src\assets\theme\scss\black-dashboard\custom\_timeline.scss" />
+    <Content Include="src\assets\theme\scss\black-dashboard\custom\_type.scss" />
+    <Content Include="src\assets\theme\scss\black-dashboard\custom\_utilities.scss" />
+    <Content Include="src\assets\theme\scss\black-dashboard\custom\_variables.scss" />
+    <Content Include="src\assets\theme\scss\black-dashboard\custom\_white-content.scss" />
+    <Content Include="src\browserslist" />
+    <Content Include="src\favicon.ico" />
+    <Content Include="src\index.html" />
+    <Content Include="src\styles.scss" />
+    <Content Include="src\tsconfig.app.json" />
+    <Content Include="src\tsconfig.spec.json" />
+    <Content Include="src\tslint.json" />
+    <Content Include="tsconfig.json" />
+    <Content Include="tslint.json" />
+  </ItemGroup>
+  <Import Project="$(VSToolsPath)\Node.js Tools\Microsoft.NodejsTools.targets" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>False</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>0</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:48022/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>True</UseCustomServer>
+          <CustomServerUrl>http://localhost:1337</CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}" User="">
+        <WebProjectProperties>
+          <StartPageUrl>
+          </StartPageUrl>
+          <StartAction>CurrentPage</StartAction>
+          <AspNetDebugging>True</AspNetDebugging>
+          <SilverlightDebugging>False</SilverlightDebugging>
+          <NativeDebugging>False</NativeDebugging>
+          <SQLDebugging>False</SQLDebugging>
+          <ExternalProgram>
+          </ExternalProgram>
+          <StartExternalURL>
+          </StartExternalURL>
+          <StartCmdLineArguments>
+          </StartCmdLineArguments>
+          <StartWorkingDirectory>
+          </StartWorkingDirectory>
+          <EnableENC>False</EnableENC>
+          <AlwaysStartWebServerOnDebug>False</AlwaysStartWebServerOnDebug>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+</Project>
