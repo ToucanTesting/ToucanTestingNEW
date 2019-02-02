@@ -119,9 +119,18 @@
             <h3 class="card-title"><i class="tim-icons icon-delivery-fast text-info"></i> 3,500€</h3>
           </div>
           <div class="card-body">
-            <div class="chart-area">
-              <canvas id="CountryChart"></canvas>
-            </div>
+            	<ng-scrollbar #scrollable
+                [invertX]="invertX"
+                [invertY]="invertY"
+                [trackX]="true"
+                [compact]="compact"
+                [shown]="shown"
+                [disableOnBreakpoints]="false"
+                [disabled]="disabled">
+
+                <div style="padding: 1em; width: 800px;" [innerHTML]="text"></div>
+                
+              </ng-scrollbar>
           </div>
         </div>
       </div>
