@@ -31,6 +31,7 @@
             "scripts": [
               "src/assets/js/plugins/moment.min.js",
               "src/assets/js/core/jquery.min.js",
+              "src/assets/js/plugins/perfect-scrollbar.jquery.min.js",
               "src/assets/js/core/popper.min.js",
               "src/assets/js/core/bootstrap.min.js",
               "src/assets/js/plugins/bootstrap-datetimepicker.js",
@@ -47,9 +48,8 @@
               "src/assets/js/plugins/jquery.tablesorter.js",
               "src/assets/js/plugins/jquery.validate.min.js",
               "src/assets/js/plugins/nouislider.min.js",
-              "src/assets/js/plugins/perfect-scrollbar.jquery.min.js",
               "src/assets/js/plugins/sweetalert2.min.js",
-              "src/assets/js/black-dashboard.min.js",
+              "src/assets/js/black-dashboard.min.js"
             ]
           },
           "configurations": {
