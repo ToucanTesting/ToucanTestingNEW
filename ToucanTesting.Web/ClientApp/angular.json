@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "ToucanTesting.Client": {
+    "ToucanTesting.Web": {
       "root": "",
       "sourceRoot": "src",
       "projectType": "application",
@@ -74,18 +74,18 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "ToucanTesting.Client:build"
+            "browserTarget": "ToucanTesting.Web:build"
           },
           "configurations": {
             "production": {
-              "browserTarget": "ToucanTesting.Client:build:production"
+              "browserTarget": "ToucanTesting.web:build:production"
             }
           }
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "ToucanTesting.Client:build"
+            "browserTarget": "ToucanTesting.Web:build"
           }
         },
         "test": {
@@ -144,7 +144,7 @@
         }
       }
     },
-    "ToucanTesting.Client-e2e": {
+    "ToucanTesting.Web-e2e": {
       "root": "e2e/",
       "projectType": "application",
       "architect": {
@@ -152,7 +152,7 @@
           "builder": "@angular-devkit/build-angular:protractor",
           "options": {
             "protractorConfig": "e2e/protractor.conf.js",
-            "devServerTarget": "ToucanTesting.Client:serve"
+            "devServerTarget": "ToucanTesting.Web:serve"
           }
         },
         "lint": {
@@ -167,5 +167,5 @@
       }
     }
   },
-  "defaultProject": "ToucanTesting.Client"
+  "defaultProject": "ToucanTesting.Web"
 }

@@ -1,11 +1,11 @@
 {
-  "name": "ToucanTesting.Client",
+  "name": "ToucanTesting",
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
     "build": "ng build",
-    "build:ssr": "ng run ToucanTesting.Client:server:dev",
+    "build:ssr": "ng run ToucanTesting.Web:server:dev",
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e"
