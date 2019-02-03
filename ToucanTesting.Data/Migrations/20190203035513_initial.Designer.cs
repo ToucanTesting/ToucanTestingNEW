@@ -10,14 +10,14 @@ using ToucanTesting.Data;
 namespace ToucanTesting.Data.Migrations
 {
     [DbContext(typeof(ToucanDbContext))]
-    [Migration("20181124233110_InitialMigration")]
-    partial class InitialMigration
+    [Migration("20190203035513_initial")]
+    partial class initial
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
-                .HasAnnotation("ProductVersion", "2.1.4-rtm-31024")
+                .HasAnnotation("ProductVersion", "2.2.1-servicing-10028")
                 .HasAnnotation("Relational:MaxIdentifierLength", 128)
                 .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
@@ -62,9 +62,13 @@ namespace ToucanTesting.Data.Migrations
 
                     b.Property<string>("Name");
 
+                    b.Property<long?>("TenantId");
+
                     b.Property<Guid>("TentantId");
 
                     b.HasKey("Id");
+
+                    b.HasIndex("TenantId");
 
                     b.ToTable("Suites");
                 });
@@ -96,6 +100,8 @@ namespace ToucanTesting.Data.Migrations
 
                     b.Property<string>("Email");
 
+                    b.Property<string>("HashedPassword");
+
                     b.Property<DateTime>("ModifiedDate");
 
                     b.Property<long?>("TenantId");
@@ -116,6 +122,13 @@ namespace ToucanTesting.Data.Migrations
                     b.HasOne("ToucanTesting.Data.Models.Suite")
                         .WithMany("Modules")
                         .HasForeignKey("SuiteId");
+                });
+
+            modelBuilder.Entity("ToucanTesting.Data.Models.Suite", b =>
+                {
+                    b.HasOne("ToucanTesting.Data.Models.Tenant")
+                        .WithMany("Suites")
+                        .HasForeignKey("TenantId");
                 });
 
             modelBuilder.Entity("ToucanTesting.Data.Models.User", b =>

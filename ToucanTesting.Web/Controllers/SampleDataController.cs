@@ -2,6 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.CodeAnalysis;
 
 namespace ToucanTesting.Web.Controllers
 {
@@ -16,6 +17,7 @@ namespace ToucanTesting.Web.Controllers
         [HttpGet("[action]")]
         public IEnumerable<WeatherForecast> WeatherForecasts()
         {
+            string hashedPassword = BCrypt.Net.BCrypt.HashPassword("sdfsdf");
             var rng = new Random();
             return Enumerable.Range(1, 5).Select(index => new WeatherForecast
             {
@@ -33,10 +35,7 @@ namespace ToucanTesting.Web.Controllers
 
             public int TemperatureF
             {
-                get
-                {
-                    return 32 + (int)(TemperatureC / 0.5556);
-                }
+                get { return 32 + (int) (TemperatureC / 0.5556); }
             }
         }
     }
