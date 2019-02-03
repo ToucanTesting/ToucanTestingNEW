@@ -1,8 +1,7 @@
 ﻿using System;
-using Microsoft.EntityFrameworkCore.Metadata;
 using Microsoft.EntityFrameworkCore.Migrations;
 
-namespace ToucanTesting.Data.Migrations
+namespace ToucanTesting.Repository.Migrations
 {
     public partial class initial : Migration
     {
@@ -12,8 +11,7 @@ namespace ToucanTesting.Data.Migrations
                 name: "Tenants",
                 columns: table => new
                 {
-                    Id = table.Column<long>(nullable: false)
-                        .Annotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn),
+                    Id = table.Column<Guid>(nullable: false),
                     CreateDate = table.Column<DateTime>(nullable: false),
                     ModifiedDate = table.Column<DateTime>(nullable: false),
                     Name = table.Column<string>(nullable: true)
@@ -27,14 +25,13 @@ namespace ToucanTesting.Data.Migrations
                 name: "Suites",
                 columns: table => new
                 {
-                    Id = table.Column<long>(nullable: false)
-                        .Annotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn),
+                    Id = table.Column<Guid>(nullable: false),
                     CreateDate = table.Column<DateTime>(nullable: false),
                     ModifiedDate = table.Column<DateTime>(nullable: false),
                     TentantId = table.Column<Guid>(nullable: false),
                     Name = table.Column<string>(nullable: true),
                     IsEnabled = table.Column<bool>(nullable: false),
-                    TenantId = table.Column<long>(nullable: true)
+                    TenantId = table.Column<Guid>(nullable: true)
                 },
                 constraints: table =>
                 {
@@ -51,15 +48,14 @@ namespace ToucanTesting.Data.Migrations
                 name: "Users",
                 columns: table => new
                 {
-                    Id = table.Column<long>(nullable: false)
-                        .Annotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn),
+                    Id = table.Column<Guid>(nullable: false),
                     CreateDate = table.Column<DateTime>(nullable: false),
                     ModifiedDate = table.Column<DateTime>(nullable: false),
                     TentantId = table.Column<Guid>(nullable: false),
                     UserName = table.Column<string>(nullable: true),
                     Email = table.Column<string>(nullable: true),
-                    HashedPassword = table.Column<string>(nullable: true),
-                    TenantId = table.Column<long>(nullable: true)
+                    Password = table.Column<string>(nullable: true),
+                    TenantId = table.Column<Guid>(nullable: true)
                 },
                 constraints: table =>
                 {
@@ -76,15 +72,14 @@ namespace ToucanTesting.Data.Migrations
                 name: "Modules",
                 columns: table => new
                 {
-                    Id = table.Column<long>(nullable: false)
-                        .Annotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn),
+                    Id = table.Column<Guid>(nullable: false),
                     CreateDate = table.Column<DateTime>(nullable: false),
                     ModifiedDate = table.Column<DateTime>(nullable: false),
                     TentantId = table.Column<Guid>(nullable: false),
                     Name = table.Column<string>(nullable: true),
                     Sequence = table.Column<int>(nullable: false),
                     DisabledAt = table.Column<DateTime>(nullable: true),
-                    SuiteId = table.Column<long>(nullable: true)
+                    SuiteId = table.Column<Guid>(nullable: true)
                 },
                 constraints: table =>
                 {
@@ -111,6 +106,18 @@ namespace ToucanTesting.Data.Migrations
                 name: "IX_Users_TenantId",
                 table: "Users",
                 column: "TenantId");
+
+            migrationBuilder.InsertData(
+                table: "Tenants",
+                columns: new[] { "Id", "Name", "CreateDate", "ModifiedDate" },
+                values: new object[] { Guid.NewGuid(), "Avengers", DateTime.Now, DateTime.Now }
+            );
+
+            migrationBuilder.InsertData(
+                table: "Tenants",
+                columns: new[] { "Id", "Name", "CreateDate", "ModifiedDate" },
+                values: new object[] { Guid.NewGuid(), "Defenders", DateTime.Now, DateTime.Now }
+            );
         }
 
         protected override void Down(MigrationBuilder migrationBuilder)

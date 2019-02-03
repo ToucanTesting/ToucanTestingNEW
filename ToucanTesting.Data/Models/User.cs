@@ -1,13 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-
-namespace ToucanTesting.Data.Models
+﻿namespace ToucanTesting.Data.Models
 {
     public class User : TenantEntity
     {
         public string UserName { get; set; }
         public string Email { get; set; }
-        public string HashedPassword { get; set; }
+        public string Password { get; set; }
     }
 }

@@ -1,6 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Text;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace ToucanTesting.Data.Models
 {
@@ -12,7 +11,8 @@ namespace ToucanTesting.Data.Models
             ModifiedDate = DateTime.UtcNow;
         }
 
-        public long Id { get; set; }
+        [DatabaseGenerated(DatabaseGeneratedOption.Identity)]   
+        public Guid Id { get; set; }
         public DateTime CreateDate { get; set; }
         public DateTime ModifiedDate { get; set; }
     }

@@ -3,11 +3,13 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.26124.0
 MinimumVisualStudioVersion = 15.0.26124.0
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ToucanTesting.Web", "ToucanTesting.Web\ToucanTesting.Web.csproj", "{64FF6206-9D5A-4A28-8C28-B1CA1ED66DE7}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ToucanTesting.Web", "ToucanTesting.Web\ToucanTesting.Web.csproj", "{64FF6206-9D5A-4A28-8C28-B1CA1ED66DE7}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ToucanTesting.Tests", "ToucanTesting.Tests\ToucanTesting.Tests.csproj", "{AFB21479-57F3-4B4C-B202-15EDFCA3C722}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ToucanTesting.Tests", "ToucanTesting.Tests\ToucanTesting.Tests.csproj", "{AFB21479-57F3-4B4C-B202-15EDFCA3C722}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ToucanTesting.Data", "ToucanTesting.Data\ToucanTesting.Data.csproj", "{E83E3741-2FCB-4483-BECB-007F9AABE2BC}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ToucanTesting.Data", "ToucanTesting.Data\ToucanTesting.Data.csproj", "{E83E3741-2FCB-4483-BECB-007F9AABE2BC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ToucanTesting.Repository", "ToucanTesting.Repository\ToucanTesting.Repository.csproj", "{BB0463BD-85E7-498E-A872-5C1099A00C3C}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -17,9 +19,6 @@ Global
 		Release|Any CPU = Release|Any CPU
 		Release|x64 = Release|x64
 		Release|x86 = Release|x86
-	EndGlobalSection
-	GlobalSection(SolutionProperties) = preSolution
-		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
 		{64FF6206-9D5A-4A28-8C28-B1CA1ED66DE7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
@@ -58,5 +57,23 @@ Global
 		{E83E3741-2FCB-4483-BECB-007F9AABE2BC}.Release|x64.Build.0 = Release|Any CPU
 		{E83E3741-2FCB-4483-BECB-007F9AABE2BC}.Release|x86.ActiveCfg = Release|Any CPU
 		{E83E3741-2FCB-4483-BECB-007F9AABE2BC}.Release|x86.Build.0 = Release|Any CPU
+		{BB0463BD-85E7-498E-A872-5C1099A00C3C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BB0463BD-85E7-498E-A872-5C1099A00C3C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BB0463BD-85E7-498E-A872-5C1099A00C3C}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{BB0463BD-85E7-498E-A872-5C1099A00C3C}.Debug|x64.Build.0 = Debug|Any CPU
+		{BB0463BD-85E7-498E-A872-5C1099A00C3C}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{BB0463BD-85E7-498E-A872-5C1099A00C3C}.Debug|x86.Build.0 = Debug|Any CPU
+		{BB0463BD-85E7-498E-A872-5C1099A00C3C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BB0463BD-85E7-498E-A872-5C1099A00C3C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BB0463BD-85E7-498E-A872-5C1099A00C3C}.Release|x64.ActiveCfg = Release|Any CPU
+		{BB0463BD-85E7-498E-A872-5C1099A00C3C}.Release|x64.Build.0 = Release|Any CPU
+		{BB0463BD-85E7-498E-A872-5C1099A00C3C}.Release|x86.ActiveCfg = Release|Any CPU
+		{BB0463BD-85E7-498E-A872-5C1099A00C3C}.Release|x86.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {9F957407-C4A2-4585-9A75-15A1117B0CA2}
 	EndGlobalSection
 EndGlobal

@@ -1,10 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-using Microsoft.EntityFrameworkCore;
+﻿using Microsoft.EntityFrameworkCore;
 using ToucanTesting.Data.Models;
 
-namespace ToucanTesting.Data
+namespace ToucanTesting.Repository
 {
     public class ToucanDbContext : DbContext
     {

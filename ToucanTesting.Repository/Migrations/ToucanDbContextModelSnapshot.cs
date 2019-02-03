@@ -4,9 +4,9 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
-using ToucanTesting.Data;
+using ToucanTesting.Repository;
 
-namespace ToucanTesting.Data.Migrations
+namespace ToucanTesting.Repository.Migrations
 {
     [DbContext(typeof(ToucanDbContext))]
     partial class ToucanDbContextModelSnapshot : ModelSnapshot
@@ -21,9 +21,8 @@ namespace ToucanTesting.Data.Migrations
 
             modelBuilder.Entity("ToucanTesting.Data.Models.Module", b =>
                 {
-                    b.Property<long>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+                    b.Property<Guid>("Id")
+                        .ValueGeneratedOnAdd();
 
                     b.Property<DateTime>("CreateDate");
 
@@ -35,7 +34,7 @@ namespace ToucanTesting.Data.Migrations
 
                     b.Property<int>("Sequence");
 
-                    b.Property<long?>("SuiteId");
+                    b.Property<Guid?>("SuiteId");
 
                     b.Property<Guid>("TentantId");
 
@@ -48,9 +47,8 @@ namespace ToucanTesting.Data.Migrations
 
             modelBuilder.Entity("ToucanTesting.Data.Models.Suite", b =>
                 {
-                    b.Property<long>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+                    b.Property<Guid>("Id")
+                        .ValueGeneratedOnAdd();
 
                     b.Property<DateTime>("CreateDate");
 
@@ -60,7 +58,7 @@ namespace ToucanTesting.Data.Migrations
 
                     b.Property<string>("Name");
 
-                    b.Property<long?>("TenantId");
+                    b.Property<Guid?>("TenantId");
 
                     b.Property<Guid>("TentantId");
 
@@ -73,9 +71,8 @@ namespace ToucanTesting.Data.Migrations
 
             modelBuilder.Entity("ToucanTesting.Data.Models.Tenant", b =>
                 {
-                    b.Property<long>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+                    b.Property<Guid>("Id")
+                        .ValueGeneratedOnAdd();
 
                     b.Property<DateTime>("CreateDate");
 
@@ -90,19 +87,18 @@ namespace ToucanTesting.Data.Migrations
 
             modelBuilder.Entity("ToucanTesting.Data.Models.User", b =>
                 {
-                    b.Property<long>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+                    b.Property<Guid>("Id")
+                        .ValueGeneratedOnAdd();
 
                     b.Property<DateTime>("CreateDate");
 
                     b.Property<string>("Email");
 
-                    b.Property<string>("HashedPassword");
-
                     b.Property<DateTime>("ModifiedDate");
 
-                    b.Property<long?>("TenantId");
+                    b.Property<string>("Password");
+
+                    b.Property<Guid?>("TenantId");
 
                     b.Property<Guid>("TentantId");
 

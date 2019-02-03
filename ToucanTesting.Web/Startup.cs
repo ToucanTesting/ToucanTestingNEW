@@ -8,7 +8,9 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.IdentityModel.Tokens;
-using ToucanTesting.Data;
+using ToucanTesting.Repository;
+using ToucanTesting.Repository.Repositories;
+using AutoMapper;
 
 namespace ToucanTesting.Web
 {
@@ -53,6 +55,9 @@ namespace ToucanTesting.Web
             {
                 configuration.RootPath = "ClientApp/dist";
             });
+
+            services.AddAutoMapper();
+            services.AddTransient<IUsersRepository, UsersRespository>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
