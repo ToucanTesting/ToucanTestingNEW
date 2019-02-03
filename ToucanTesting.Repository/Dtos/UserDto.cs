@@ -9,4 +9,10 @@ namespace ToucanTesting.Repository.Dtos
         [Required]
         public string Email { get; set; }
     }
+
+    public class PasswordUserDto : UserDto
+    {
+        [Required]
+        public string Password { get; set; }
+    }
 }
