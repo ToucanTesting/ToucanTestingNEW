@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace ToucanTesting.Application.Infrastructure.Repositories
+namespace ToucanTesting.Application.Infrastructure.Repository
 {
     public interface IReadableRepository<TEntity, TDto> where TEntity : class where TDto : class
     {

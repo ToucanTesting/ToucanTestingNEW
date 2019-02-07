@@ -1,5 +1,5 @@
 ﻿using AutoMapper;
-using ToucanTesting.Application.Domain.Users;
+using ToucanTesting.Application.Users;
 using ToucanTesting.Domain.Entities;
 
 namespace ToucanTesting.Persistence.Repositories
