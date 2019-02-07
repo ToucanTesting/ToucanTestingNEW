@@ -1,6 +1,6 @@
 ﻿using System.ComponentModel.DataAnnotations;
 
-namespace ToucanTesting.Application.Dtos
+namespace ToucanTesting.Application.Domain.Users
 {
     public class UserDto
     {

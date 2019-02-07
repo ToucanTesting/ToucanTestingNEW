@@ -9,6 +9,7 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.IdentityModel.Tokens;
 using AutoMapper;
+using ToucanTesting.Application.Domain.Users;
 using ToucanTesting.Persistence;
 using ToucanTesting.Persistence.Repositories;
 
@@ -57,7 +58,7 @@ namespace ToucanTesting.Web
             });
 
             services.AddAutoMapper();
-            services.AddTransient<IUsersRepository, UsersRespository>();
+            services.AddTransient<IUsersRepository, UsersRepository>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

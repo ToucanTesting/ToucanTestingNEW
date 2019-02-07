@@ -1,4 +1,4 @@
-﻿namespace ToucanTesting.Application.Dtos
+﻿namespace ToucanTesting.Application.Domain.Suites
 {
     public class SuiteDto
     {

@@ -1,6 +1,7 @@
 ﻿using AutoMapper;
+using ToucanTesting.Application.Domain.Suites;
+using ToucanTesting.Application.Domain.Users;
 using ToucanTesting.Domain.Entities;
-using ToucanTesting.Application.Dtos;
 
 namespace ToucanTesting.Application
 {

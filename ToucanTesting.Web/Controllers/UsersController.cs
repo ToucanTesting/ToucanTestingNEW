@@ -1,12 +1,14 @@
 ﻿using System.Collections.Generic;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
-using ToucanTesting.Application.Dtos;
+using ToucanTesting.Application.Domain.Users;
 using ToucanTesting.Persistence.Repositories;
 
 namespace ToucanTesting.Web.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
+//    [Authorize]
     public class UsersController : Controller
     {
         private IUsersRepository _repository;
