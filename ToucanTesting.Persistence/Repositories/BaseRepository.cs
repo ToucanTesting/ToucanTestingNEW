@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using AutoMapper;
-using ToucanTesting.Application.Infrastructure.Repositories;
+using ToucanTesting.Application.Infrastructure.Repository;
 
 namespace ToucanTesting.Persistence.Repositories
 {

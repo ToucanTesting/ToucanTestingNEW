@@ -9,7 +9,8 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.IdentityModel.Tokens;
 using AutoMapper;
-using ToucanTesting.Application.Users;
+using ToucanTesting.Application.DTOs.Users;
+using ToucanTesting.Application.Infrastructure.Users;
 using ToucanTesting.Persistence;
 using ToucanTesting.Persistence.Repositories;
 

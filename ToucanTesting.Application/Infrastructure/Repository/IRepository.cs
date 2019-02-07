@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace ToucanTesting.Application.Infrastructure.Repositories
+namespace ToucanTesting.Application.Infrastructure.Repository
 {
     public interface IRepository<TEntity, TDto> :
         IWritableRepository<TEntity, TDto>,

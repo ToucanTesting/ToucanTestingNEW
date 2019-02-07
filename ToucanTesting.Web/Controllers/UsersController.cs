@@ -1,7 +1,8 @@
 ﻿using System.Collections.Generic;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
-using ToucanTesting.Application.Users;
+using ToucanTesting.Application.DTOs.Users;
+using ToucanTesting.Application.Infrastructure.Users;
 using ToucanTesting.Persistence.Repositories;
 
 namespace ToucanTesting.Web.Controllers
