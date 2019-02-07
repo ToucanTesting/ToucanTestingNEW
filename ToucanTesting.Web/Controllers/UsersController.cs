@@ -1,7 +1,7 @@
 ﻿using System.Collections.Generic;
 using Microsoft.AspNetCore.Mvc;
-using ToucanTesting.Repository.Dtos;
-using ToucanTesting.Repository.Repositories;
+using ToucanTesting.Application.Dtos;
+using ToucanTesting.Persistence.Repositories;
 
 namespace ToucanTesting.Web.Controllers
 {
@@ -16,7 +16,6 @@ namespace ToucanTesting.Web.Controllers
             _repository = repository;
         }
 
-        // GET: api/Users
         [HttpGet]
         public IActionResult Get()
         {
@@ -24,14 +23,12 @@ namespace ToucanTesting.Web.Controllers
             return Ok(users);
         }
 
-        // GET: api/Users/5
         [HttpGet("{id}", Name = "Get")]
         public string Get(int id)
         {
             return "value";
         }
 
-        // POST: api/Users
         [HttpPost]
         public IActionResult Post([FromBody] PasswordUserDto userDto)
         {
@@ -39,13 +36,11 @@ namespace ToucanTesting.Web.Controllers
             return Ok();
         }
 
-        // PUT: api/Users/5
         [HttpPut("{id}")]
         public void Put(int id, [FromBody] string value)
         {
         }
 
-        // DELETE: api/ApiWithActions/5
         [HttpDelete("{id}")]
         public void Delete(int id)
         {

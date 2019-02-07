@@ -1,8 +1,8 @@
-﻿using ToucanTesting.Data.Models;
-using ToucanTesting.Repository.Dtos;
-using AutoMapper;
+﻿using AutoMapper;
+using ToucanTesting.Domain.Entities;
+using ToucanTesting.Application.Dtos;
 
-namespace ToucanTesting.Repository.Repositories
+namespace ToucanTesting.Persistence.Repositories
 {
     public class UsersRespository : BaseRepository<User, UserDto>, IUsersRepository
     {

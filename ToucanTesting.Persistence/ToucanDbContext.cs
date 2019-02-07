@@ -1,7 +1,7 @@
 ﻿using Microsoft.EntityFrameworkCore;
-using ToucanTesting.Data.Models;
+using ToucanTesting.Domain.Entities;
 
-namespace ToucanTesting.Repository
+namespace ToucanTesting.Persistence
 {
     public class ToucanDbContext : DbContext
     {

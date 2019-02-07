@@ -1,6 +1,6 @@
 ﻿using System.Collections.Generic;
 
-namespace ToucanTesting.Data.Models
+namespace ToucanTesting.Domain.Entities
 {
     public class Tenant : Entity
     {

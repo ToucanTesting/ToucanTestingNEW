@@ -1,6 +1,6 @@
 using NUnit.Framework;
 
-namespace ToucanTesting.Tests
+namespace ToucanTesting.Domain.Tests
 {
     public class Tests
     {

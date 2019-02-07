@@ -1,8 +1,8 @@
 ﻿using AutoMapper;
-using ToucanTesting.Data.Models;
-using ToucanTesting.Repository.Dtos;
+using ToucanTesting.Domain.Entities;
+using ToucanTesting.Application.Dtos;
 
-namespace ToucanTesting.Repository
+namespace ToucanTesting.Application
 {
     public class MappingProfile : Profile
     {

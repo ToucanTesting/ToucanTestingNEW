@@ -8,9 +8,9 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.IdentityModel.Tokens;
-using ToucanTesting.Repository;
-using ToucanTesting.Repository.Repositories;
 using AutoMapper;
+using ToucanTesting.Persistence;
+using ToucanTesting.Persistence.Repositories;
 
 namespace ToucanTesting.Web
 {

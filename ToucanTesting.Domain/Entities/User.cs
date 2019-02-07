@@ -1,4 +1,4 @@
-﻿namespace ToucanTesting.Data.Models
+﻿namespace ToucanTesting.Domain.Entities
 {
     public class User : TenantEntity
     {

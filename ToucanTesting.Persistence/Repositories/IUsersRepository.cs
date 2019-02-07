@@ -1,9 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
-using ToucanTesting.Data.Models;
-using ToucanTesting.Repository.Dtos;
+using ToucanTesting.Domain.Entities;
+using ToucanTesting.Application.Dtos;
 
-namespace ToucanTesting.Repository.Repositories
+namespace ToucanTesting.Persistence.Repositories
 {
     public interface IUsersRepository : IRepository<User, UserDto>
     {

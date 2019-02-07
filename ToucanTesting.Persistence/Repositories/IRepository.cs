@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace ToucanTesting.Repository.Repositories
+namespace ToucanTesting.Persistence.Repositories
 {
     public interface IRepository<TEntity, TDto> where TEntity : class where TDto : class
     {

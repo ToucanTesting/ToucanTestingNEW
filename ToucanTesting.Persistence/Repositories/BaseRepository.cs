@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using AutoMapper;
 
-namespace ToucanTesting.Repository.Repositories
+namespace ToucanTesting.Persistence.Repositories
 {
     public class BaseRepository<TEntity, TDto> : IRepository<TEntity, TDto> where TEntity : class where TDto : class
     {

@@ -1,7 +1,7 @@
 ﻿using System;
 using System.ComponentModel.DataAnnotations.Schema;
 
-namespace ToucanTesting.Data.Models
+namespace ToucanTesting.Domain.Entities
 {
     public class Entity
     {
@@ -11,7 +11,7 @@ namespace ToucanTesting.Data.Models
             ModifiedDate = DateTime.UtcNow;
         }
 
-        [DatabaseGenerated(DatabaseGeneratedOption.Identity)]   
+        [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public Guid Id { get; set; }
         public DateTime CreateDate { get; set; }
         public DateTime ModifiedDate { get; set; }

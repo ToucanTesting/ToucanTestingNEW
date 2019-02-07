@@ -21,7 +21,8 @@
     <Content Remove="$(SpaRoot)**" />
     <None Remove="$(SpaRoot)**" />
     <None Include="$(SpaRoot)**" Exclude="$(SpaRoot)node_modules\**" />
-    <ProjectReference Include="..\ToucanTesting.Repository\ToucanTesting.Repository.csproj" />
+    <ProjectReference Include="..\ToucanTesting.Domain\ToucanTesting.Domain.csproj" />
+    <ProjectReference Include="..\ToucanTesting.Persistence\ToucanTesting.Persistence.csproj" />
     <TypeScriptCompile Include="ClientApp\src\app\app.module.ts" />
   </ItemGroup>
   <Target Name="DebugEnsureNodeEnv" BeforeTargets="Build" Condition=" '$(Configuration)' == 'Debug' And !Exists('$(SpaRoot)node_modules') ">

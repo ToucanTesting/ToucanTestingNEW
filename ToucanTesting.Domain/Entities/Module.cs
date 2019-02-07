@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace ToucanTesting.Data.Models
+namespace ToucanTesting.Domain.Entities
 {
     public class Module : TenantEntity
     {
