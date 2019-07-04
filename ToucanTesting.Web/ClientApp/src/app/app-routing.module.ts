@@ -2,7 +2,7 @@ import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { DashboardComponent } from './pages/dashboard/dashboard.component';
 import { SuitesComponent } from './pages/testing/suites/suites.component';
-import { RunsComponent } from './pages/testings/runs/runs.component';
+import { RunsComponent } from './pages/testing/runs/runs.component';
 
 const routes: Routes = [
   { path: '', component: DashboardComponent },
