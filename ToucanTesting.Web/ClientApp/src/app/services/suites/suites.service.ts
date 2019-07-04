@@ -7,6 +7,6 @@ import { HttpClient} from '@angular/common/http';
 export class SuitesService {
 
   constructor(
-    private _http: HttpClient
+    private httpClient: HttpClient
   ) { }
 }
