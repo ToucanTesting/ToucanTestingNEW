@@ -21,6 +21,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Core", "Core", "{2B1AF976-0
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ToucanTesting.Application", "ToucanTesting.Application\ToucanTesting.Application.csproj", "{EEFE9262-D1E9-47A7-9817-E24D444E795E}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ToucanTesting.WebTwo", "ToucanTesting.WebTwo\ToucanTesting.WebTwo.csproj", "{74DBEC3A-F566-4B5B-B9C6-15B2BBDD14AB}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -91,6 +93,18 @@ Global
 		{EEFE9262-D1E9-47A7-9817-E24D444E795E}.Release|x64.Build.0 = Release|Any CPU
 		{EEFE9262-D1E9-47A7-9817-E24D444E795E}.Release|x86.ActiveCfg = Release|Any CPU
 		{EEFE9262-D1E9-47A7-9817-E24D444E795E}.Release|x86.Build.0 = Release|Any CPU
+		{74DBEC3A-F566-4B5B-B9C6-15B2BBDD14AB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{74DBEC3A-F566-4B5B-B9C6-15B2BBDD14AB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{74DBEC3A-F566-4B5B-B9C6-15B2BBDD14AB}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{74DBEC3A-F566-4B5B-B9C6-15B2BBDD14AB}.Debug|x64.Build.0 = Debug|Any CPU
+		{74DBEC3A-F566-4B5B-B9C6-15B2BBDD14AB}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{74DBEC3A-F566-4B5B-B9C6-15B2BBDD14AB}.Debug|x86.Build.0 = Debug|Any CPU
+		{74DBEC3A-F566-4B5B-B9C6-15B2BBDD14AB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{74DBEC3A-F566-4B5B-B9C6-15B2BBDD14AB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{74DBEC3A-F566-4B5B-B9C6-15B2BBDD14AB}.Release|x64.ActiveCfg = Release|Any CPU
+		{74DBEC3A-F566-4B5B-B9C6-15B2BBDD14AB}.Release|x64.Build.0 = Release|Any CPU
+		{74DBEC3A-F566-4B5B-B9C6-15B2BBDD14AB}.Release|x86.ActiveCfg = Release|Any CPU
+		{74DBEC3A-F566-4B5B-B9C6-15B2BBDD14AB}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
