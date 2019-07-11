@@ -1,12 +1,13 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
+using System.Threading.Tasks;
 
 namespace ToucanTesting.Application.Infrastructure.Repository
 {
     public interface IWritableRepository<TEntity, TDto> where TEntity : class where TDto : class
     {
-        void Add(TDto dto);
+        Task Add(TDto dto);
         void AddRange(IEnumerable<TDto> dtos);
     }
 }

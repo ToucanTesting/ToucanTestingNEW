@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Threading.Tasks;
 using AutoMapper;
 using ToucanTesting.Application.Infrastructure.Repository;
 
@@ -28,11 +29,11 @@ namespace ToucanTesting.Persistence.Repositories
             return _mapper.Map<IEnumerable<TEntity>, IEnumerable<TDto>>(dtos);
         }
 
-        public void Add(TDto dto)
+        public async Task Add(TDto dto)
         {
             var entity = _mapper.Map<TDto, TEntity>(dto);
             _context.Set<TEntity>().Add(entity);
-            _context.SaveChanges();
+            await _context.SaveChangesAsync();
         }
 
         public void AddRange(IEnumerable<TDto> dtos)

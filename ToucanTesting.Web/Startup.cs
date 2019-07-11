@@ -35,6 +35,13 @@ namespace ToucanTesting.Web
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+            //Probably need this for API
+            //services.AddCors(options => options.AddPolicy("AllowAll",
+            //    builder => builder
+            //        .AllowAnyOrigin()
+            //        .AllowAnyMethod()
+            //        .AllowAnyHeader()
+            //        .WithExposedHeaders(new string[] { "totalPages" })));
             services.AddDbContext<ToucanDbContext>(options =>
                 options.UseSqlServer(Configuration.GetConnectionString("default")));
             services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)

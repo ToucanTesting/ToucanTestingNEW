@@ -1,15 +1,14 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Threading.Tasks;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using ToucanTesting.Application.DTOs.Users;
 using ToucanTesting.Application.Infrastructure.Users;
-using ToucanTesting.Persistence.Repositories;
 
 namespace ToucanTesting.Web.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-//    [Authorize]
     public class UsersController : Controller
     {
         private IUsersRepository _repository;
@@ -23,7 +22,7 @@ namespace ToucanTesting.Web.Controllers
         public IActionResult Get()
         {
             var users = _repository.GetAll();
-            return Ok(users);
+            return Ok("hello");
         }
 
         [HttpGet("{id}", Name = "Get")]
@@ -33,9 +32,22 @@ namespace ToucanTesting.Web.Controllers
         }
 
         [HttpPost]
-        public IActionResult Post([FromBody] PasswordUserDto userDto)
+        [Route("register")]
+        [AllowAnonymous]
+        public async Task<IActionResult> Post([FromBody] PasswordUserDto userDto)
         {
-            _repository.Add(userDto);
+            if (ModelState.IsValid)
+            {
+                try
+                {
+                    await _repository.Add(userDto);
+                    return Ok();
+                }
+                catch (Exception ex)
+                {
+                    return BadRequest(ex);
+                }
+            }
             return Ok();
         }
 
