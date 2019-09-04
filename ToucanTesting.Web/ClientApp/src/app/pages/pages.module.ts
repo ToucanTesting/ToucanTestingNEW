@@ -1,15 +1,28 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { NgScrollbarModule } from 'ngx-scrollbar';
+import { FormsModule } from '@angular/forms';
+
+// Kno2
+import { SharedModule } from '@toucan/shared/shared.module';
+
+// Pages
 import { DashboardComponent } from './dashboard/dashboard.component';
-import { SuitesComponent } from './testing/suites/suites.component';
-import { RunsComponent } from './testing/runs/runs.component';
+import { LoginComponent } from './login/login.component';
+import { IntakeComponent } from './intake/intake.component';
+import { QueryComponent } from './records/query/query.component';
+import { RequestComponent } from './records/request/request.component';
+import { ReleaseComponent } from './release/release.component';
 
 @NgModule({
+  declarations: [DashboardComponent, LoginComponent, IntakeComponent, QueryComponent, RequestComponent, ReleaseComponent],
   imports: [
     CommonModule,
-    NgScrollbarModule
+    SharedModule,
+    FormsModule
   ],
-  declarations: [DashboardComponent, SuitesComponent, RunsComponent]
+  exports: [
+    LoginComponent,
+    DashboardComponent
+  ]
 })
 export class PagesModule { }

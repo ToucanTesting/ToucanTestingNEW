@@ -1,0 +1,41 @@
+import { Organization } from './';
+
+export class Profile {
+    fullName: string;
+    firstName: string;
+    lastName: string;
+    phoneNumber: number;
+    userId: string;
+    userName: string;
+    domain: string;
+    organizationId: string;
+    organizationName: string;
+    isAdmin: boolean;
+    isNetworkAdmin: boolean;
+    isIdProofed: boolean;
+    idProofedAttemptDate: string;
+    idProofedFileName: string;
+    isAcceptedEULA: boolean;
+    orgIsIdProofed: boolean;
+    orgIsActivated: boolean;
+    orgIsCancelled: boolean;
+    orgIsInGracePeriod: boolean;
+    orgIsAcceptedEULA: boolean;
+    orgIsFreePlan: boolean;
+    requiresManualIdProof: boolean;
+    administerOfNetworkId: number;
+    administerOfNetworkObjectId: string;
+    roles: string[];
+    sessionTimeoutMinutes: number;
+    uiResources: any;
+    accessToken: string;
+    organizations: Organization[];
+    host: string;
+    fastSpringDomain: string;
+    subscriptionReference: string;
+    partner: string;
+    intercomAppId: string;
+    resellerType: number;
+    resellerName: string;
+    finalLoginDate: string;
+}

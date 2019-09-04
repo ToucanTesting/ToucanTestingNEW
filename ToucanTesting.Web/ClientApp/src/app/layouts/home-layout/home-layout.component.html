@@ -1,0 +1,28 @@
+<app-header [navbarBrandRouterLink]="['/dashboard']"
+            [fixed]="false"
+            [navbarBrandFull]="{src: 'assets/images/logo.png', alt: 'Kno2 Logo'}"
+            [sidebarToggler]="'lg'"
+            [asideMenuToggler]="'lg'"
+            class="navbar-dark bg-dark"
+            style="border-bottom: none">
+            <ul tt-topnav class="nav navbar-nav ml-auto"></ul>
+</app-header>
+<div class="app-body">
+    <app-sidebar [fixed]="true"
+                 [display]="'lg'">
+        <app-sidebar-nav [navItems]="navItems"
+                         [perfectScrollbar]
+                         [disabled]="sidebarMinimized"></app-sidebar-nav>
+        <app-sidebar-minimizer></app-sidebar-minimizer>
+    </app-sidebar>
+    <!-- Main content -->
+    <main class="main">
+        <cui-breadcrumb>
+            <li tt-breadcrumbs class="breadcrumb-menu d-md-down-none"></li>
+        </cui-breadcrumb>
+        <div class="container-fluid">
+            <router-outlet></router-outlet>
+        </div><!-- /.container-fluid -->
+    </main>
+</div>
+<!-- <tt-footer></tt-footer> -->

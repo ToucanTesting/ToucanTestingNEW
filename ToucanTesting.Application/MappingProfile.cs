@@ -1,6 +1,5 @@
 ﻿using AutoMapper;
 using ToucanTesting.Application.DTOs.Suites;
-using ToucanTesting.Application.DTOs.Users;
 using ToucanTesting.Domain.Entities;
 
 namespace ToucanTesting.Application
@@ -9,11 +8,6 @@ namespace ToucanTesting.Application
     {
         public MappingProfile()
         {
-            CreateMap<User, UserDto>();
-            CreateMap<PasswordUserDto, User>()
-                .ForMember(dto => dto.Password, 
-                    m => m.MapFrom(u => BCrypt.Net.BCrypt.HashPassword(u.Password)));
-
             CreateMap<Suite, SuiteDto>();
             CreateMap<SuiteDto, Suite>();
         }

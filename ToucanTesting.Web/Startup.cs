@@ -1,5 +1,4 @@
 using System.Text;
-using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
@@ -10,8 +9,6 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using AutoMapper;
-using ToucanTesting.Application.DTOs.Users;
-using ToucanTesting.Application.Infrastructure.Users;
 using ToucanTesting.Persistence;
 using ToucanTesting.Persistence.Repositories;
 using Microsoft.IdentityModel.Tokens;
@@ -44,21 +41,6 @@ namespace ToucanTesting.Web
             //        .WithExposedHeaders(new string[] { "totalPages" })));
             services.AddDbContext<ToucanDbContext>(options =>
                 options.UseSqlServer(Configuration.GetConnectionString("default")));
-            services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
-                .AddJwtBearer(options =>
-                {
-                    options.TokenValidationParameters = new TokenValidationParameters
-                    {
-                        ValidateIssuer = true,
-                        ValidateAudience = true,
-                        ValidateLifetime = true,
-                        ValidateIssuerSigningKey = true,
-
-                        ValidIssuer = "http://localhost:5000",
-                        ValidAudience = "http://localhost:5000",
-                        IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes("superSecretKey@345"))
-                    };
-                });
 
             services.AddMvc(options => options.EnableEndpointRouting = false);
 
@@ -69,7 +51,6 @@ namespace ToucanTesting.Web
             });
 
             services.AddAutoMapper();
-            services.AddTransient<IUsersRepository, UsersRepository>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

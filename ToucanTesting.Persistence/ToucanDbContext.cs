@@ -9,7 +9,6 @@ namespace ToucanTesting.Persistence
         {
         }
         public DbSet<Tenant> Tenants { get; set; }
-        public DbSet<User> Users { get; set; }
         public DbSet<Suite> Suites { get; set; }
         public DbSet<Module> Modules { get; set; }
     }

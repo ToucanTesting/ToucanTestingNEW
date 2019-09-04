@@ -22,16 +22,19 @@
   </ItemGroup>
   <ItemGroup>
     <!-- Don't publish the SPA source files, but do show them in the project files list -->
+    <Compile Remove="ClientApp\src\**" />
     <Content Remove="$(SpaRoot)**" />
+    <Content Remove="ClientApp\src\**" />
+    <EmbeddedResource Remove="ClientApp\src\**" />
     <None Remove="$(SpaRoot)**" />
+    <None Remove="ClientApp\src\**" />
     <None Include="$(SpaRoot)**" Exclude="$(SpaRoot)node_modules\**" />
     <ProjectReference Include="..\ToucanTesting.Domain\ToucanTesting.Domain.csproj" />
     <ProjectReference Include="..\ToucanTesting.Persistence\ToucanTesting.Persistence.csproj" />
-    <TypeScriptCompile Include="ClientApp\src\app\app.module.ts" />
-    <TypeScriptCompile Include="ClientApp\src\app\app-routing.module.ts" />
-    <Content Include="ClientApp\package.json" />
-    <Content Include="ClientApp\src\karma.conf.js" />
     <Content Include="Controllers\UsersController.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="ClientApp\" />
   </ItemGroup>
   <Target Name="DebugEnsureNodeEnv" BeforeTargets="Build" Condition=" '$(Configuration)' == 'Debug' And !Exists('$(SpaRoot)node_modules') ">
     <!-- Ensure Node.js is installed -->
@@ -51,7 +54,7 @@
     <ItemGroup>
       <DistFiles Include="$(SpaRoot)dist\**; $(SpaRoot)dist-server\**" />
       <DistFiles Include="$(SpaRoot)node_modules\**" Condition="'$(BuildServerSideRenderer)' == 'true'" />
-      <ResolvedFileToPublish Include="@(DistFiles-&gt;'%(FullPath)')" Exclude="@(ResolvedFileToPublish)">
+      <ResolvedFileToPublish Include="@(DistFiles->'%(FullPath)')" Exclude="@(ResolvedFileToPublish)">
         <RelativePath>%(DistFiles.Identity)</RelativePath>
         <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       </ResolvedFileToPublish>
