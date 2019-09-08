@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { login } from '@toucan/store/session/session.actions';
-import { AuthService, SocialUser } from "angularx-social-login";
-import { FacebookLoginProvider, GoogleLoginProvider } from "angularx-social-login";
+import { AuthService, SocialUser, GoogleLoginProvider } from 'angularx-social-login';
+import { environment } from 'src/environments/environment';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'tt-login-box',
@@ -12,27 +12,13 @@ export class LoginBoxComponent {
   private user: SocialUser;
   private loggedIn: boolean;
 
-    constructor(
-      private authService: AuthService
-    ) { }
+  constructor(
+    private authService: AuthService,
+    private router: Router
+  ) { }
 
-    ngOnInit() {
-        this.authService.authState.subscribe((user) => {
-          console.log(user);
-        this.user = user;
-        this.loggedIn = (user != null);
-      });
-    }
-
-    signInWithGoogle(): void {
-      this.authService.signIn(GoogleLoginProvider.PROVIDER_ID);
-    }
-//
-//    signInWithFB(): void {
-//      this.authService.signIn(FacebookLoginProvider.PROVIDER_ID);
-//    }
-//
-//    signOut(): void {
-//      this.authService.signOut();
-//    }
+  signInWithGoogle(): void {
+    this.authService.signIn(GoogleLoginProvider.PROVIDER_ID)
+      .then(() => this.router.navigate(['/dashboard']));
+  }
 }

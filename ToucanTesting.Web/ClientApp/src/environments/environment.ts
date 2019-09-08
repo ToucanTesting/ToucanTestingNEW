@@ -5,7 +5,8 @@
 export const environment = {
   production: false,
   appId: '3E71A908C3604C4D81DDD4D4E57AC7B7',
-  providerId: '713453324025-hsmmid4v2c7ck1r73jsi2gulnkckl25r.apps.googleusercontent.com'
+  providerId: '713453324025-hsmmid4v2c7ck1r73jsi2gulnkckl25r.apps.googleusercontent.com',
+  redirectUri: 'http://toucan.ngrok.io/#/dashboard'
 };
 
 /*

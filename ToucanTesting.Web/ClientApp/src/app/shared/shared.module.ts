@@ -13,12 +13,13 @@ import {
   AppFooterModule,
 } from '@coreui/angular';
 
-import { SocialLoginModule, AuthServiceConfig } from "angularx-social-login";
-import { GoogleLoginProvider, FacebookLoginProvider } from "angularx-social-login";
+import { SocialLoginModule, AuthServiceConfig } from 'angularx-social-login';
+import { GoogleLoginProvider, FacebookLoginProvider } from 'angularx-social-login';
 import { PERFECT_SCROLLBAR_CONFIG } from 'ngx-perfect-scrollbar';
 import { PerfectScrollbarModule } from 'ngx-perfect-scrollbar';
 import { PerfectScrollbarConfigInterface } from 'ngx-perfect-scrollbar';
 import { FooterComponent } from './components/footer/footer.component';
+import { BsDropdownModule } from 'ngx-bootstrap/dropdown';
 
 const DEFAULT_PERFECT_SCROLLBAR_CONFIG: PerfectScrollbarConfigInterface = {
   suppressScrollX: true
@@ -27,11 +28,7 @@ const DEFAULT_PERFECT_SCROLLBAR_CONFIG: PerfectScrollbarConfigInterface = {
 const config = new AuthServiceConfig([
   {
     id: GoogleLoginProvider.PROVIDER_ID,
-        provider: new GoogleLoginProvider(environment.providerId)
-  },
-  {
-    id: FacebookLoginProvider.PROVIDER_ID,
-    provider: new FacebookLoginProvider("Facebook-App-Id")
+    provider: new GoogleLoginProvider(environment.providerId)
   }
 ]);
 
@@ -48,7 +45,8 @@ export function provideConfig() {
     AppRoutingModule,
     AppFooterModule,
     PerfectScrollbarModule,
-    SocialLoginModule
+    SocialLoginModule,
+    BsDropdownModule.forRoot(),
   ],
   exports: [
     TopnavComponent,

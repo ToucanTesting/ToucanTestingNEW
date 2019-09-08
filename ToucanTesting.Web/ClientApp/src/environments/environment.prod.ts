@@ -1,4 +1,6 @@
 export const environment = {
   production: true,
-  appId: ''
+  appId: '',
+  providerId: '',
+  redirectUri: ''
 };

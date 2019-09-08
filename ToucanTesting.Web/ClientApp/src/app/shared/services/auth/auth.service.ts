@@ -4,8 +4,8 @@ import { environment } from '@toucan/environment';
 import { Observable, BehaviorSubject } from 'rxjs';
 import { Credentials, User, TokenResponse } from '@toucan/shared/models';
 import { Token } from '@angular/compiler';
-import { AuthService as SocialLoginAuthService } from "angularx-social-login";
-import { FacebookLoginProvider, GoogleLoginProvider } from "angularx-social-login";
+import { AuthService as SocialLoginAuthService } from 'angularx-social-login';
+import { FacebookLoginProvider, GoogleLoginProvider } from 'angularx-social-login';
 
 @Injectable({
   providedIn: 'root'
